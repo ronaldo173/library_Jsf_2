@@ -1,6 +1,9 @@
 package ua.ronaldo173.library.web.servlets;
 
+import ua.ronaldo173.library.web.controllers.SearchController;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +13,7 @@ import java.io.OutputStream;
 /**
  * Created by Developer on 11.04.2016.
  */
+@WebServlet("/ShowImage")
 public class ShowImage extends HttpServlet {
 
     @Override
@@ -25,14 +29,16 @@ public class ShowImage extends HttpServlet {
 
     private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("image/jpeg");
-        OutputStream out = resp.getOutputStream();
 
-        try {
+
+        try (OutputStream out = resp.getOutputStream()) {
             int id = Integer.valueOf(req.getParameter("id"));
 
+            SearchController searchController = (SearchController) req.getSession(false).getAttribute("searchController");
 
-        } finally {
-
+            byte[] image = searchController.getImage(id);
+            resp.setContentLength(image.length);
+            out.write(image);
         }
 
     }

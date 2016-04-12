@@ -1,20 +1,51 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
+<h:head>
+    <title>Facelet Title</title>
+</h:head>
+<h:body>
 
-        <ui:composition template="/templates/library_template.xhtml">
+    <ui:composition template="/templates/library_template.xhtml">
 
-            <ui:define name="title">
-                #{msg.book_list}
-            </ui:define>
+        <ui:define name="title">
+            #{msg.book_list}
+        </ui:define>
 
-        </ui:composition>
+        <ui:define name="content">
+            <p><strong>#{msg.book_count} #{searchController.currentBookList.size()}</strong></p>
 
-    </h:body>
+            <h:dataTable value="#{searchController.currentBookList}" var="b" cellspacing="10px"
+                         columnClasses="col1, col2, col3">
+                <h:column>
+                    <h:graphicImage value="/ShowImage?id=#{b.id}" width="120px" height="160px"/>
+                </h:column>
+
+                <h:column>
+
+                    <div>
+                        <p><a href="#">#{b.name}</a></p>
+                        <p><strong>#{msg.author_name}:</strong>#{b.author}</p>
+                        <p><strong>#{msg.page_count}:</strong>#{b.pageCount} #{msg.pages}</p>
+                        <p><strong>#{msg.publisher}:</strong>#{b.publisher}</p>
+                        <p><strong>#{msg.publish_year}:</strong>#{b.publishDate}</p>
+                        <p><strong>#{msg.isbn}</strong>#{b.isbn}</p>
+                    </div>
+                </h:column>
+
+                <h:column>
+                    <div class="book_details">
+                        <p><strong>#{msg.descr}</strong></p>
+                        <p>tut budet opisanie</p>
+                    </div>
+                </h:column>
+            </h:dataTable>
+        </ui:define>
+
+    </ui:composition>
+
+</h:body>
 </html>
 

@@ -5,7 +5,6 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
-import java.util.WeakHashMap;
 
 /**
  * Created by Developer on 08.04.2016.
@@ -14,18 +13,15 @@ public class TestSingleton {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        WeakHashMap<Integer, String> weakHashMap = new WeakHashMap<>();
+       A a = new A();
 
-        Integer key2 = new Integer(2);
 
-        weakHashMap.put(1, "first");
-        weakHashMap.put(key2, "second");
 
-        System.out.println(weakHashMap);
+        B b = new B();
+//        b.c = 2;
 
-        key2 = null;
-        System.gc();
-        System.out.println(weakHashMap);
+
+        System.out.println(a.equals(b));
     }
 
 }
@@ -84,5 +80,69 @@ class Person2 {
     public boolean isInDiapasonGood() {
         return birthdate.compareTo(start) >= 0 &&
                 birthdate.compareTo(end) < 0;
+    }
+}
+
+class A{
+    int a;
+    int b;
+    public A() {
+        System.out.println("a constr");
+    }
+
+    void a(){
+        System.out.println("a");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        A a1 = (A) o;
+
+        if (a != a1.a) return false;
+        return b == a1.b;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = a;
+        result = 31 * result + b;
+        return result;
+    }
+}
+class B extends A{
+    int c;
+
+    public B() {
+        super();
+        System.out.println("b constr");
+    }
+
+    @Override
+    void a() {
+        System.out.println("\nb");
+        super.a();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof B)) return false;
+        if (!super.equals(o)) return false;
+
+        B b = (B) o;
+
+        return c == b.c;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + c;
+        return result;
     }
 }

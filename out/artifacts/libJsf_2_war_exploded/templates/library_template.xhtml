@@ -20,11 +20,35 @@
 <h:body>
 
     <div class="container">
+
         <div class="header">
             <ui:insert name="head">
                 <ui:include src="header.xhtml"/>
             </ui:insert>
         </div>
+    </div>
+
+    <div class="middle">
+
+        <div class="left_menu">
+            <ui:insert name="left_menu">
+                <ui:include src="left_menu.xhtml"/>
+            </ui:insert>
+        </div>
+
+        <div class="content">
+            <ui:insert name="content">
+                <ui:include src="content.xhtml"/>
+            </ui:insert>
+        </div>
+
+        <div style="clear: both">&nbsp;</div>
+    </div>
+
+    <div class="footer">
+        <ui:insert name="footer">
+            <ui:include src="footer.xhtml"/>
+        </ui:insert>
     </div>
 
 </h:body>

@@ -83,7 +83,7 @@ a:hover, a:active, a:focus {
     color: #999;
 }
 
-.genres a, a:visited { 
+.genres  {
     padding: 3px 3px 3px 15px;
     display: block; 
     text-decoration: none;
@@ -142,10 +142,8 @@ a:hover, a:active, a:focus {
     -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
     -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
     box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
-    background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
-    background-color:#79bbff;
+    background: #79bbff;
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
     border-radius:6px;
@@ -159,11 +157,9 @@ a:hover, a:active, a:focus {
     text-decoration:none;
     text-shadow:1px 1px 0px #528ecc;
 }.search_button:hover {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
-    background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
-    background-color:#378de5;
-    cursor:pointer;
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+     background: #378de5;
+     cursor:pointer;
 }.search_button:active {
     position:relative;
     top:1px;
@@ -265,9 +261,8 @@ a:hover, a:active, a:focus {
 }
 
 .pdf_viewer{
-    margin: 0 auto;
     width:850px;
-    margin-top:30px;
+    margin: 30px auto 0;
     height: 1000px;
 }
 

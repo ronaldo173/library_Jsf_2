@@ -31,14 +31,8 @@ public class SearchController implements Serializable {
         searchList.put(bundle.getString("book_name"), SearchType.TITLE);
     }
 
-    public static void main(String[] args) {
-
-        Character[] letters = new SearchController().getLetters();
-        System.out.println(Arrays.toString(letters));
-    }
-
     private void fillBooksAll() {
-        String query = "select g.*, b.name, b.isbn, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+        String query = "select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
                 "join book b on b.genre_id=g.id\n" +
                 "join author a on a.id=b.author_id \n" +
                 "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id" +
@@ -51,7 +45,7 @@ public class SearchController implements Serializable {
     public void fillBooksByGenre() {
         Map<String, String> parameterMap = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         Integer genre_id = Integer.valueOf(parameterMap.get("genre_id"));
-        String query = "select g.*, b.name, b.isbn, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+        String query = "select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
                 "join book b on b.genre_id=g.id\n" +
                 "join author a on a.id=b.author_id \n" +
                 "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id where g.id = "
@@ -69,7 +63,7 @@ public class SearchController implements Serializable {
 
             while (resultSet.next()) {
                 Book book = new Book();
-                book.setId(resultSet.getLong("id"));
+                book.setId(resultSet.getLong("book_id"));
                 book.setName(resultSet.getString("name"));
                 book.setGenre(resultSet.getString("genre"));
                 book.setIsbn(resultSet.getString("isbn"));
@@ -77,6 +71,7 @@ public class SearchController implements Serializable {
                 book.setPageCount(resultSet.getInt("page_count"));
                 book.setPublishDate(resultSet.getInt("publish_year"));
                 book.setPublisher(resultSet.getString("publisher"));
+                book.setImage(resultSet.getBytes("image"));
 //                book.setDescr(resultSet.getString("descr"));
 
                 currentBookList.add(book);
@@ -91,6 +86,10 @@ public class SearchController implements Serializable {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }
+
+        for (Book book : currentBookList) {
+            System.out.println(book);
         }
     }
 
@@ -139,5 +138,10 @@ public class SearchController implements Serializable {
 
     public Map<String, SearchType> getSearchList() {
         return searchList;
+    }
+
+    public static void main(String[] args) {
+
+        new SearchController().fillBooksAll();
     }
 }
