@@ -30,14 +30,17 @@
         </div>
 
         <div class="welcome">
-            <h5>#{msg.welcome}, #{user.username}</h5>
-            <a href="#">#{msg.exit}</a>
+            <h:form>
+                <h5>#{msg.welcome}, #{user.username}</h5>
+                <h:commandLink action="#{loginController.exit()}" value="#{msg.exit}"/>
+
+            </h:form>
         </div>
 
         <div class="search_div">
             <h:form styleClass="search_form">
-                <h:inputText id="search_str" styleClass="search_string"/>
-                <h:commandButton value="#{msg.search}" styleClass="search_button"/>
+                <h:inputText id="search_str" styleClass="search_string" value="#{searchController.searchString}"/>
+                <h:commandButton value="#{msg.search}" styleClass="search_button" action="#{searchController.fillBookBySearch}"/>
                 <h:selectOneMenu value="#{searchController.searchType}">
                     <f:selectItems value="${searchController.searchList}"/>
                 </h:selectOneMenu>
@@ -46,9 +49,13 @@
         </div>
 
         <div class="letters">
-            <ui:repeat value="#{searchController.letters}"  var="lett">
-                <a href="#">#{lett}</a>
-            </ui:repeat>
+           <h:form>
+               <ui:repeat value="#{searchController.letters}" var="letter">
+                   <h:commandLink action="#{searchController.fillBookByLetter()}" value="#{letter}">
+                       <f:param name="letter" value="#{letter}"/>
+                   </h:commandLink>
+               </ui:repeat>
+           </h:form>
         </div>
     </ui:composition>
 

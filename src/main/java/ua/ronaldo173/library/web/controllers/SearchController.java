@@ -10,10 +10,7 @@ import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Developer on 11.04.2016.
@@ -30,9 +27,9 @@ public class SearchController implements Serializable {
     public SearchController() {
         fillBooksAll();
 
-//        ResourceBundle bundle = ResourceBundle.getBundle("messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
-//        searchList.put(bundle.getString("author_name"), SearchType.AUTHOR);
-//        searchList.put(bundle.getString("book_name"), SearchType.TITLE);
+        ResourceBundle bundle = ResourceBundle.getBundle("messages", FacesContext.getCurrentInstance().getViewRoot().getLocale());
+        searchList.put(bundle.getString("author_name"), SearchType.AUTHOR);
+        searchList.put(bundle.getString("book_name"), SearchType.TITLE);
     }
 
     public static void main(String[] args) {
@@ -138,10 +135,14 @@ public class SearchController implements Serializable {
     }
 
     public void fillBookByLetter() {
-        Map<String , String > params = FacesContext.getCurrentInstance().getExternalContext().getInitParameterMap();
+        Map<String , String > params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         String searchLetter = params.get("letter");
 
-        fillBooksBySql("");
+        StringBuilder query = new StringBuilder("select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+                "join book b on b.genre_id=g.id\n" +
+                "join author a on a.id=b.author_id \n" +
+                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id where substr(b.name,1,1) = '" + searchLetter + "' order by b.name");
+        fillBooksBySql(query.toString());
     }
 
     public byte[] getImage(int id) {
