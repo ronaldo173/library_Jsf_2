@@ -2,9 +2,7 @@ package ua.ronaldo173.library.web;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.*;
 
 /**
  * Created by Developer on 08.04.2016.
@@ -13,17 +11,83 @@ public class TestSingleton {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-       A a = new A();
+        Map<first, Integer> map = new HashMap<>();
+        Map<first, Integer> map2 = new HashMap<>();
+        int op = 50000;
+       long t0 = System.currentTimeMillis();
+        for (int i = 0; i < op; i++) {
+            map.put(new first(i, (double)i, Integer.toString(i)), i);
+        }
+        for (int i = 0; i < op; i++) {
+            map.get(new first(i, (double)i, Integer.toString(i)));
+        }
+       long t2 = System.currentTimeMillis();
+        System.out.println(t2-t0);
 
-
-
-        B b = new B();
-//        b.c = 2;
-
-
-        System.out.println(a.equals(b));
+       long t10 = System.currentTimeMillis();
+        for (int i = 0; i < op; i++) {
+            map2.put(new first(i, (double)i, Integer.toString(i)), i);
+        }
+        for (int i = 0; i < op; i++) {
+            map2.get(new first(i, (double)i, Integer.toString(i)));
+        }
+       long t12 = System.currentTimeMillis();
+        System.out.println(t12-t10);
     }
 
+}
+
+class first{
+    int a;
+    double b;
+    String c;
+
+    public first(int a, double b, String c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    @Override
+    public int hashCode() {
+        return 1;
+    }
+}
+
+class second{
+    int a;
+    double b;
+    String c;
+
+    public second(int a, double b, String c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof second)) return false;
+
+        second second = (second) o;
+
+        if (a != second.a) return false;
+        if (Double.compare(second.b, b) != 0) return false;
+        return c != null ? c.equals(second.c) : second.c == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = a;
+        temp = Double.doubleToLongBits(b);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (c != null ? c.hashCode() : 0);
+        return result;
+    }
 }
 
 class MySingleton implements Serializable {
