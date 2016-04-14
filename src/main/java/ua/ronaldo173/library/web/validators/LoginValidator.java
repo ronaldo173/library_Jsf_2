@@ -20,10 +20,17 @@ public class LoginValidator implements Validator {
         try {
             String newValue = value.toString();
 
-            if (newValue.length() < 5) {
+            if (newValue.length() < 3) {
                 throw new IllegalArgumentException(bundle.getString("login_length_error"));
             }
 
+            if (newValue != null && newValue.length() > 0 && isNumber(newValue.substring(0, 1))) {
+                throw new IllegalArgumentException(bundle.getString("login_start_from_num_error"));
+            }
+
+            if (getTestArray().contains(newValue)){
+                throw new IllegalArgumentException(bundle.getString("login_already_exists_error"));
+            }
 
 
         } catch (IllegalArgumentException e) {
@@ -34,8 +41,17 @@ public class LoginValidator implements Validator {
 
     }
 
+    private boolean isNumber(String c) {
+        try {
+            Double.parseDouble(c);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
+
     private ArrayList<String> getTestArray() {
-        ArrayList<String> list = new ArrayList<String>();// заглушка, желательно делать запрос в базу данных для проверки существующего имени
+        ArrayList<String> list = new ArrayList<String>();// заглушка, nado в базу данных для проверки существующего имени
         list.add("username");
         list.add("login");
         return list;

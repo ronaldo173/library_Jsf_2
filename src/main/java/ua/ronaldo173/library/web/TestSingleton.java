@@ -9,31 +9,41 @@ import java.util.*;
  */
 public class TestSingleton {
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException, CloneNotSupportedException {
 
-        Map<first, Integer> map = new HashMap<>();
-        Map<first, Integer> map2 = new HashMap<>();
-        int op = 50000;
-       long t0 = System.currentTimeMillis();
-        for (int i = 0; i < op; i++) {
-            map.put(new first(i, (double)i, Integer.toString(i)), i);
-        }
-        for (int i = 0; i < op; i++) {
-            map.get(new first(i, (double)i, Integer.toString(i)));
-        }
-       long t2 = System.currentTimeMillis();
-        System.out.println(t2-t0);
+      gg a1 = new gg();
 
-       long t10 = System.currentTimeMillis();
-        for (int i = 0; i < op; i++) {
-            map2.put(new first(i, (double)i, Integer.toString(i)), i);
-        }
-        for (int i = 0; i < op; i++) {
-            map2.get(new first(i, (double)i, Integer.toString(i)));
-        }
-       long t12 = System.currentTimeMillis();
-        System.out.println(t12-t10);
+        gg a2 = new gg2();
+
+        System.out.println(a1 + " " + a1.getClass());
+        System.out.println(a2 + " " + a2.getClass());
+        System.out.println(a1.getClass()==a2.getClass());
     }
+
+   static class gg implements Cloneable{
+        int a;
+        int b;
+
+    protected    void print(){
+           System.out.println("1");
+       }
+
+
+       @Override
+       public String toString() {
+           return "gg{" +
+                   "a=" + a +
+                   ", b=" + b +
+                   '}';
+       }
+   }
+    static class gg2 extends gg{
+
+        {
+            super.print();
+        }
+    }
+
 
 }
 

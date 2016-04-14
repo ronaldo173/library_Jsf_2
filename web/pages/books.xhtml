@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
     <title>Facelet Title</title>
 </h:head>
@@ -42,6 +43,21 @@
                     </div>
                 </h:column>
             </h:dataTable>
+
+            <div class="pager">
+                <h:form rendered="#{searchController.totalBookCount > searchController.booksOnPage}">
+                    #{msg.pages}
+
+                    <ui:repeat value="#{searchController.pageNumbers}" var="pageNum">
+                        <h:commandLink value="#{pageNum}" action="#{searchController.selectPage}"
+                                       styleClass="#{pageNum == searchController.selectedPageNumber ? 'selected_page':''}">
+                            <f:param name="page_number" value="#{pageNum}"/>
+                        </h:commandLink>
+                    </ui:repeat>
+                </h:form>
+            </div>
+
+
         </ui:define>
 
     </ui:composition>
