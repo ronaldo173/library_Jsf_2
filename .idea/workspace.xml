@@ -2,65 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f0b63b2-9b08-4607-b578-1ed1c0b8b392" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/filters/CheckSessionFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/servlets/PdfContent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/A.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/B.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/Person1.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/Person1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/Person2.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/Person2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/TestSingleton.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/TestSingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/LoginController.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/SearchController.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/SearchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/validators/LoginValidator.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/validators/LoginValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/A.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/B.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/Person1.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/Person1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/Person2.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/Person2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/TestSingleton.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/TestSingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/LoginController.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/SearchController.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/SearchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/validators/LoginValidator.class" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/validators/LoginValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/A.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/B.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/MySingleton.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/MySingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/Person1.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/Person1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/Person2.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/Person2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/TestSingleton.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/TestSingleton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/controllers/SearchController$1.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/controllers/SearchController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/controllers/SearchController.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/controllers/SearchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/first.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/first.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/second.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/second.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/validators/LoginValidator.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/validators/LoginValidator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/js/library.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages_en_US.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages_ru_RU.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/A.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/B.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/MySingleton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/Person1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/Person2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/TestSingleton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/beans/Book.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/beans/Genre.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/beans/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/GenreController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/controllers/SearchController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/db/Database.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/enums/SearchType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/servlets/ShowImage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/ua/ronaldo173/library/web/validators/LoginValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/faces-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/glassfish-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages_en_US.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages_ru_RU.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/A.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/B.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton$SingletonHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/MySingleton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/Person1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/Person2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/TestSingleton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/beans/Book.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/beans/Genre.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/beans/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/GenreController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/controllers/SearchController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/db/Database.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/enums/SearchType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/servlets/ShowImage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/ua/ronaldo173/library/web/validators/LoginValidator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/index.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/pages/books.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/css/style_index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/css/style_main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/images/lib.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/images/library.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/images/search.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/images/splash.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/content.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/footer.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/header.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/left_menu.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/library_template.xhtml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/controllers/GenreController.class" afterPath="$PROJECT_DIR$/target/classes/ua/ronaldo173/library/web/controllers/GenreController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages.properties" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages_en_US.properties" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages_en_US.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages_ru_RU.properties" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/classes/messages_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages.properties" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages_en_US.properties" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages_en_US.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages_ru_RU.properties" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/WEB-INF/messages_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/pages/books.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/pages/books.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/css/style_main.css" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/resources/css/style_main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/header.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/header.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/left_menu.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/left_menu.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/library_template.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/libJsf_2_war_exploded/templates/library_template.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/GenreController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/GenreController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/SearchController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/nls/messages.properties" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/nls/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/nls/messages_en_US.properties" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/nls/messages_en_US.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/nls/messages_ru_RU.properties" afterPath="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/nls/messages_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages.properties" afterPath="$PROJECT_DIR$/target/classes/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages_en_US.properties" afterPath="$PROJECT_DIR$/target/classes/messages_en_US.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages_ru_RU.properties" afterPath="$PROJECT_DIR$/target/classes/messages_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pages/books.xhtml" afterPath="$PROJECT_DIR$/web/pages/books.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/style_main.css" afterPath="$PROJECT_DIR$/web/resources/css/style_main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/content.xhtml" afterPath="$PROJECT_DIR$/web/templates/content.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/library_template.xhtml" afterPath="$PROJECT_DIR$/web/templates/library_template.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.xhtml" afterPath="$PROJECT_DIR$/web/index.xhtml" />
     </list>
     <ignored path="libJsf_2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5555556">
-              <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+            <state vertical-scroll-proportion="-8.135135">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding>
                 <element signature="e#11321#11322#0" expanded="true" />
                 <element signature="e#11360#11361#0" expanded="true" />
@@ -138,34 +143,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27672955">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/validators/LoginValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="library.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resources/js/library.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="style_main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/css/style_main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-15.967742">
               <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckSessionFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/filters/CheckSessionFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -190,16 +203,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenreController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/GenreController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -208,6 +211,7 @@
         <option value="jsf" />
         <option value="facelets" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -222,7 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/index.xhtml" />
         <option value="$PROJECT_DIR$/web/templates/footer.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/servlets/ShowImage.java" />
         <option value="$PROJECT_DIR$/libJsf_2.iml" />
@@ -246,6 +249,8 @@
         <option value="$PROJECT_DIR$/web/resources/css/style_main.css" />
         <option value="$PROJECT_DIR$/web/pages/books.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/SearchController.java" />
+        <option value="$PROJECT_DIR$/web/resources/js/library.js" />
+        <option value="$PROJECT_DIR$/web/index.xhtml" />
       </list>
     </option>
   </component>
@@ -381,6 +386,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libJsf_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library_Jsf_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,6 +615,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libJsf_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library_Jsf_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -662,6 +703,9 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="libJsf_2" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="index.xhtml" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/libJsf_2_war_exploded/index.xhtml">
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -1182,17 +1226,19 @@
         </option>
       </method>
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.glass" />
       <item index="1" class="java.lang.String" itemvalue="Application.SearchController" />
       <item index="2" class="java.lang.String" itemvalue="Application.TestSingleton" />
       <item index="3" class="java.lang.String" itemvalue="Application.GenreController" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.xhtml" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.SearchController" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestSingleton" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GenreController" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.xhtml" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SearchController" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestSingleton" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GenreController" />
       </list>
     </recent_temporary>
   </component>
@@ -1217,7 +1263,7 @@
       <workItem from="1460544600576" duration="3809000" />
       <workItem from="1460572084446" duration="995000" />
       <workItem from="1460612252992" duration="11804000" />
-      <workItem from="1460694971629" duration="17734000" />
+      <workItem from="1460694971629" duration="24467000" />
     </task>
     <task id="LOCAL-00001" summary="work on separating books by pages">
       <created>1460638270680</created>
@@ -1225,11 +1271,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460638270680</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="all functions work on jsf(but need fix with pages)">
+      <created>1460728130209</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1460728130209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69924000" />
+    <option name="totallyTimeSpent" value="76657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-4" width="1696" height="1066" extended-state="0" />
@@ -1244,10 +1296,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32931727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24122807" sideWeight="0.49753997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23135965" sideWeight="0.49753997" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19372694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19372694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1310,7 +1362,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="work on separating books by pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on separating books by pages" />
+    <MESSAGE value="all functions work on jsf(but need fix with pages)" />
+    <option name="LAST_COMMIT_MESSAGE" value="all functions work on jsf(but need fix with pages)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1321,13 +1374,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/pages/books.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/library_template.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1434,13 +1480,6 @@
     <entry file="file://$PROJECT_DIR$/web/resources/images/lib.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.387096">
-          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/servlets/ShowImage.java">
@@ -1615,14 +1654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/validators/LoginValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/content.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.354838">
@@ -1734,14 +1765,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/controllers/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        <state vertical-scroll-proportion="-8.135135">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="e#11321#11322#0" expanded="true" />
             <element signature="e#11360#11361#0" expanded="true" />
             <element signature="e#11425#11426#0" expanded="true" />
             <element signature="e#11481#11482#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/ronaldo173/library/web/validators/LoginValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/js/library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27672955">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
