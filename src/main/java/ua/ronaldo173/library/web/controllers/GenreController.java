@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by Developer on 11.04.2016.
  */
-@ManagedBean
+@ManagedBean(eager = true)
 @ApplicationScoped
 public class GenreController implements Serializable {
     private List<Genre> genreList;

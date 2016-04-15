@@ -3,61 +3,78 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:g="http://java.sun.com/jsf/core"
+>
 <h:head>
+    <link rel="stylesheet" type="text/css" href="web/resources/css/style_main.css"/>
     <title>Facelet Title</title>
 </h:head>
 <h:body>
 
     <ui:composition template="/templates/library_template.xhtml">
 
+        <ui:define name="bookst_count">
+            #{msg.book_count} #{searchController.totalBookCount}
+        </ui:define>
+
         <ui:define name="title">
             #{msg.book_list}
         </ui:define>
 
         <ui:define name="content">
-            <p><strong>#{msg.book_count} #{searchController.currentBookList.size()}</strong></p>
 
             <h:dataTable value="#{searchController.currentBookList}" var="b" cellspacing="10px"
                          columnClasses="col1, col2, col3">
+
                 <h:column>
-                    <h:graphicImage value="/ShowImage?id=#{b.id}" width="120px" height="160px"/>
+                    <h:outputLink value="#{request.contextPath}/PdfContent?id=#{b.id}" target="_blank">
+                        <h:graphicImage value="/ShowImage?id=#{b.id}" width="160" height="220"/>
+                    </h:outputLink>
                 </h:column>
 
                 <h:column>
 
                     <div>
-                        <p><a href="#">#{b.name}</a></p>
-                        <p><strong>#{msg.author_name}:</strong>#{b.author}</p>
-                        <p><strong>#{msg.page_count}:</strong>#{b.pageCount} #{msg.pages}</p>
-                        <p><strong>#{msg.publisher}:</strong>#{b.publisher}</p>
-                        <p><strong>#{msg.publish_year}:</strong>#{b.publishDate}</p>
-                        <p><strong>#{msg.isbn}</strong>#{b.isbn}</p>
+                        <p><h:outputLink value="#{request.contextPath}/PdfContent?id=#{b.id}"
+                                         target="_blank">#{b.name} </h:outputLink></p>
+                        <p><strong>#{msg.author_name}: </strong>#{b.author}</p>
+                        <p><strong>#{msg.page_count}:</strong> #{b.pageCount} #{msg.pages}</p>
+                        <p><strong>#{msg.publisher}</strong> #{b.publisher}</p>
+                        <p><strong>#{msg.publish_year}</strong> #{b.publishDate} г.</p>
+
+                        <p><strong>#{msg.isbn}</strong> #{b.isbn}</p>
+                        <p><h:graphicImage library="images" name="book.gif"/><h:outputLink styleClass="content_link"
+                                                                                           value="#{request.contextPath}/PdfContent?id=#{b.id}"
+                                                                                           target="_blank">
+                            #{msg.read} </h:outputLink>
+                        </p>
                     </div>
+
                 </h:column>
+
 
                 <h:column>
                     <div class="book_details">
                         <p><strong>#{msg.descr}</strong></p>
-                        <p>tut budet opisanie</p>
+                        <p>#{b.descr}</p>
                     </div>
                 </h:column>
+
+
             </h:dataTable>
+        </ui:define>
 
-            <div class="pager">
-                <h:form rendered="#{searchController.totalBookCount > searchController.booksOnPage}">
-                    #{msg.pages}
+        <ui:define name="paginator">
+            <h:form rendered="#{searchController.totalBookCount >searchController.booksOnPage}">
+                #{msg.pager}
 
-                    <ui:repeat value="#{searchController.pageNumbers}" var="pageNum">
-                        <h:commandLink value="#{pageNum}" action="#{searchController.selectPage}"
-                                       styleClass="#{pageNum == searchController.selectedPageNumber ? 'selected_page':''}">
-                            <f:param name="page_number" value="#{pageNum}"/>
-                        </h:commandLink>
-                    </ui:repeat>
-                </h:form>
-            </div>
-
-
+                <ui:repeat value="#{searchController.pageNumbers}" var="pageNumber">
+                    <h:commandLink value="#{pageNumber}" action="#{searchController.selectPage()}"
+                                   styleClass="#{pageNumber == searchController.selectedPageNumber ? 'selected_page':''}">
+                        <g:param name="page_number" value="#{pageNumber}"/>
+                    </h:commandLink>
+                </ui:repeat>
+            </h:form>
         </ui:define>
 
     </ui:composition>

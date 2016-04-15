@@ -30,6 +30,7 @@ public class SearchController implements Serializable {
     private long totalBookCount;
     private List<Integer> pageNumbers = new ArrayList<>();
     private String currentSql;
+    private boolean requestFromPager;
 
     public SearchController() {
         fillBooksAll();
@@ -42,9 +43,10 @@ public class SearchController implements Serializable {
     public static void main(String[] args) {
 
         SearchController searchController = new SearchController();
-        searchController.setSearchType(SearchType.AUTHOR);
-        searchController.setSearchString("goe");
-        searchController.fillBookBySearch();
+//        searchController.setSearchType(SearchType.AUTHOR);
+//        searchController.setSearchString("goe");
+//        searchController.fillBookBySearch();
+        searchController.fillBooksAll();
     }
 
     public String getSearchString() {
@@ -55,42 +57,23 @@ public class SearchController implements Serializable {
         this.searchString = searchString;
     }
 
-    private void fillBooksAll() {
-        String query = "select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
-                "join book b on b.genre_id=g.id\n" +
-                "join author a on a.id=b.author_id \n" +
-                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id" +
-                " order by name";
-
-        fillBooksBySql(query);
-
-    }
-
-    public void fillBooksByGenre() {
-        Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        selectedGenreId = Integer.valueOf(params.get("genre_id"));
-        String query = "select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
-                "join book b on b.genre_id=g.id\n" +
-                "join author a on a.id=b.author_id \n" +
-                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id where g.id = "
-                + selectedGenreId + " order by name";
-
-        fillBooksBySql(query);
-        selectedLetter = ' ';
-        selectedPageNumber = 1;
-    }
-
     private void fillBooksBySql(String query) {
 
         ResultSet resultSet = null;
         StringBuilder sqlBuilder = new StringBuilder(query);
+        currentSql = query;
 
         try {
-            resultSet = Database.getResultByQuery(sqlBuilder.toString());
-            resultSet.last();
 
-            totalBookCount = resultSet.getRow();
-            fillPageNumbers(totalBookCount, booksOnPage);
+            if (!requestFromPager){
+                resultSet = Database.getResultByQuery(sqlBuilder.toString());
+                resultSet.last();
+
+                totalBookCount = resultSet.getRow();
+                fillPageNumbers(totalBookCount, booksOnPage);
+            }
+
+
             if (totalBookCount > booksOnPage) {
                 sqlBuilder.append(" limit ").append(selectedPageNumber * booksOnPage).append(",").append(
                         booksOnPage);
@@ -110,7 +93,7 @@ public class SearchController implements Serializable {
                 book.setPublishDate(resultSet.getInt("publish_year"));
                 book.setPublisher(resultSet.getString("publisher"));
                 book.setImage(resultSet.getBytes("image"));
-//                book.setDescr(resultSet.getString("descr"));
+                book.setDescr(resultSet.getString("descr"));
 
                 currentBookList.add(book);
             }
@@ -131,8 +114,34 @@ public class SearchController implements Serializable {
         }
     }
 
+    private void fillBooksAll() {
+        String query = "select g.*, b.name, b.id as book_id, b.descr, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+                "join book b on b.genre_id=g.id\n" +
+                "join author a on a.id=b.author_id \n" +
+                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id" +
+                " order by name";
+
+        fillBooksBySql(query);
+
+    }
+
+    public String  fillBooksByGenre() {
+        Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+        submitValues(' ', 1, Integer.valueOf(params.get("genre_id")), false);
+
+        String query = "select g.*, b.name, b.id as book_id, b.descr, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+                "join book b on b.genre_id=g.id\n" +
+                "join author a on a.id=b.author_id \n" +
+                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id where g.id = "
+                + selectedGenreId + " order by name";
+
+        fillBooksBySql(query);
+
+        return "books";
+    }
+
     private void fillPageNumbers(long totalBookCount, int booksOnPage) {
-        int pageCount = totalBookCount > 0 ? (int) (totalBookCount / booksOnPage) : 0;
+        int pageCount = totalBookCount > 0 ? (int) ((totalBookCount / booksOnPage) +1) : 0;
         pageNumbers.clear();
 
         for (int i = 1; i <= pageCount; i++) {
@@ -140,13 +149,14 @@ public class SearchController implements Serializable {
         }
     }
 
-    public void fillBookBySearch() {
+    public String  fillBookBySearch() {
+        submitValues(' ', 1, -1, false);
         if (searchString.trim().length() == 0) {
             fillBooksAll();
-            return;
+            return "books";
         }
 
-        StringBuilder query = new StringBuilder("select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+        StringBuilder query = new StringBuilder("select g.*, b.name, b.descr, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
                 "join book b on b.genre_id=g.id\n" +
                 "join author a on a.id=b.author_id \n" +
                 "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id ");
@@ -162,22 +172,29 @@ public class SearchController implements Serializable {
         query.append(searchString.toLowerCase()).append("%' order by b.name");
         fillBooksBySql(query.toString());
 
-        selectedLetter = ' ';
-        selectedGenreId = -1;
-        selectedPageNumber = 1;
+        return "books";
     }
 
-    public void fillBookByLetter() {
+    public String  fillBookByLetter() {
         Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         selectedLetter = params.get("letter").charAt(0);
 
-        String  query =  "select g.*, b.name, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
+        submitValues(selectedLetter, 1, -1, false);
+        String  query =  "select g.*, b.name, b.descr, b.id as book_id, b.isbn, b.image, b.page_count, b.publish_year, a.fio, p.publisher from (select genre.id, genre.name as genre from genre) g\n" +
                 "join book b on b.genre_id=g.id\n" +
                 "join author a on a.id=b.author_id \n" +
-                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id where substr(b.name,1,1) = '" + selectedLetter + "' order by b.name";
+                "join (select publisher.id, publisher.name as publisher from publisher) p on p.id=b.publisher_id " +
+                "where substr(b.name,1,1) = '" + selectedLetter + "' order by b.name";
         fillBooksBySql(query);
-        selectedGenreId = -1;
-        selectedPageNumber =1;
+
+        return "books";
+    }
+
+    private void submitValues(char selectedLetter, int selectedPageNumber, int selectedGenreId, boolean requestFromPager) {
+        this.selectedLetter = selectedLetter;
+        this.selectedPageNumber = selectedPageNumber;
+        this.selectedGenreId = selectedGenreId;
+        this.requestFromPager = requestFromPager;
     }
 
     public byte[] getImage(int id) {
@@ -202,6 +219,29 @@ public class SearchController implements Serializable {
         return image;
     }
 
+    public byte[] getContent(int id) {
+        byte[] content = null;
+        ResultSet resultSet = null;
+        String query = "select content from book where id = " + id;
+
+        try {
+            resultSet = Database.getResultByQuery(query);
+            while (resultSet.next()){
+                content = resultSet.getBytes("content");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                resultSet.getStatement().getConnection().close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return content;
+    }
+
     public Character[] getLetters() {
         Character[] letters = new Character[32];
         char a = 'А';
@@ -211,11 +251,11 @@ public class SearchController implements Serializable {
         return letters;
     }
 
-    public String selectPage(){
+    public void selectPage(){
         Map<String , String > params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
         selectedPageNumber = Integer.valueOf(params.get("page_number"));
+        requestFromPager = true;
         fillBooksBySql(currentSql);
-        return "books";
     }
 
     public SearchType getSearchType() {
@@ -290,11 +330,12 @@ public class SearchController implements Serializable {
         this.pageNumbers = pageNumbers;
     }
 
-    public String getCurrentSql() {
-        return currentSql;
+
+    public boolean isRequestFromPager() {
+        return requestFromPager;
     }
 
-    public void setCurrentSql(String currentSql) {
-        this.currentSql = currentSql;
+    public void setRequestFromPager(boolean requestFromPager) {
+        this.requestFromPager = requestFromPager;
     }
 }

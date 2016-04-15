@@ -13,7 +13,7 @@
       xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
-    <title>Title</title>
+    <title><ui:insert name="title"/> </title>
     <h:outputStylesheet library="css" name="style_main.css"/>
 </h:head>
 
@@ -22,7 +22,7 @@
     <div class="container">
 
         <div class="header">
-            <ui:insert name="head">
+            <ui:insert name="header">
                 <ui:include src="header.xhtml"/>
             </ui:insert>
         </div>
@@ -37,9 +37,22 @@
             </div>
 
             <div class="content">
-                <ui:insert name="content">
-                    <ui:include src="content.xhtml"/>
-                </ui:insert>
+
+                <p><strong><ui:insert name="bookst_count"/> </strong></p>
+
+                <div class="pager">
+                    <ui:insert name="paginator"/>
+                </div>
+
+                <div class="content_books">
+                    <ui:insert name="content">
+                        <ui:include src="content.xhtml"/>
+                    </ui:insert>
+                </div>
+
+                <div class="pager">
+                    <ui:insert name="paginator"/>
+                </div>
             </div>
 
             <div style="clear: both">&nbsp;</div>
