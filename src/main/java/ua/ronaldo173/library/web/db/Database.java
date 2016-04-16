@@ -8,7 +8,7 @@ import java.sql.*;
  * Created by Developer on 11.04.2016.
  */
 public class Database {
-    private static Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/library";
         String user = "root";
         String password = "root";

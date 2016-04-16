@@ -38,7 +38,7 @@
 
         <div class="search_div">
             <h:form styleClass="search_form">
-                <h:inputText id="search_str" styleClass="search_string" value="#{searchController.searchString}"/>
+                <h:inputText id="search_string" styleClass="search_string" value="#{searchController.searchString}"/>
                 <h:commandButton value="#{msg.search}" styleClass="search_button"
                                  action="#{searchController.fillBookBySearch()}"/>
                 <h:selectOneMenu value="#{searchController.searchType}">
@@ -49,9 +49,9 @@
         </div>
 
         <div class="letters">
-            <h:form>
-                <ui:repeat value="#{searchController.letters}" var="letter">
-                    <h:commandLink action="#{searchController.fillBookByLetter()}" value="#{letter}"
+            <h:form id="lettersForm">
+                <ui:repeat value="#{searchController.russianLetters}" var="letter">
+                    <h:commandLink  value="#{letter}"
                                    styleClass="#{letter ==searchController.selectedLetter ? 'selected_letter' :''}">
                         <f:param name="letter" value="#{letter}"/>
                     </h:commandLink>
